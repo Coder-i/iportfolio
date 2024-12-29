@@ -1,0 +1,97 @@
+/* Add this to style.css */
+
+/* Theme Variables */
+:root {
+    /* Default Theme */
+    --primary-color: #149ddd;
+    --secondary-color: #173b6c;
+    --bg-color: #f5f8fd;
+    --header-bg: #46020a;
+    --text-color: #272829;
+    --sidebar-text: #a8a9b4;
+    --footer-bg: #040b14;
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] {
+    --primary-color: #bb86fc;
+    --secondary-color: #3700b3;
+    --bg-color: #121212;
+    --header-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --sidebar-text: #e0e0e0;
+    --footer-bg: #1e1e1e;
+  }
+  
+  /* Nature Theme */
+  [data-theme="nature"] {
+    --primary-color: #4caf50;
+    --secondary-color: #2e7d32;
+    --bg-color: #f1f8e9;
+    --header-bg: #1b5e20;
+    --text-color: #33691e;
+    --sidebar-text: #558b2f;
+    --footer-bg: #1b5e20;
+  }
+  
+  /* Ocean Theme */
+  [data-theme="ocean"] {
+    --primary-color: #0288d1;
+    --secondary-color: #01579b;
+    --bg-color: #e1f5fe;
+    --header-bg: #01579b;
+    --text-color: #0d47a1;
+    --sidebar-text: #039be5;
+    --footer-bg: #01579b;
+  }
+  
+  /* Update existing CSS with variables */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  #header {
+    background: var(--header-bg);
+  }
+  
+  .nav-menu a {
+    color: var(--sidebar-text);
+  }
+  
+  /* Theme Switcher Button Styles */
+  .theme-switcher {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
+    background: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .theme-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .theme-options.show {
+    display: block;
+  }
+  
+  .theme-option {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .theme-option:hover {
+    background: var(--bg-color);
+  }
